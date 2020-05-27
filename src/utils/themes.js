@@ -10,6 +10,8 @@ export const defaultTheme = {
   textColorInverted: neutral[100],
   disabled: neutral[400],
   textOnDisabled: neutral[300],
+  formElementBaclkground: blue[100],
+  textOnFormelementBackground: neutral[600],
   primaryFont: primaryFont,
   status: {
     warningColor: yellow[100],
