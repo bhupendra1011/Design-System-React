@@ -56,6 +56,9 @@ const App = () => {
       >
         Toggle Modal
       </button>
+
+      <br />
+
       <div
         style={{
           background: useDarkTheme
@@ -68,10 +71,14 @@ const App = () => {
           justifyContent: "space-around",
         }}
       >
+        <PrimaryButton modifiers="small">Hello World !</PrimaryButton>
+        <PrimaryButton modifiers={["success", "small"]}> Sucess</PrimaryButton>
+        <PrimaryButton modifiers={["error", "small"]}> Error!</PrimaryButton>
+        <SecondaryButton modifiers={["large", "warning"]}>
+          Warning
+        </SecondaryButton>
+        <TertiaryButton>Hello World !</TertiaryButton>
         <SignUpModal showModal={showModal} setShowModal={setShowModal} />
-        {/* <PrimaryButton>Hello World !</PrimaryButton>
-        <SecondaryButton>Hello World !</SecondaryButton>
-        <TertiaryButton>Hello World !</TertiaryButton> */}
       </div>
 
       <GlobalStyle />

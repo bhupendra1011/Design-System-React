@@ -3,7 +3,7 @@ import { defaultTheme, darkTheme } from "../src/utils";
 
 export const contexts = [
   {
-    icon: "box", // a icon displayed in the Storybook toolbar to control contextual props
+    icon: "camera", // a icon displayed in the Storybook toolbar to control contextual props
     title: "Themes", // an unique name of a contextual environment
     components: [ThemeProvider],
     params: [

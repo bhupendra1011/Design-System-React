@@ -11,42 +11,42 @@ const BUTTON_MODIFIERS = {
     font-size: ${typeScale.header5};
     padding: 16px 24px;
   `,
-  warning: () => `
-    background-color: ${(props) => props.theme.status.warningColor};
-    color: ${(props) => props.theme.textColorInverted};
+  warning: ({ theme }) => `
+    background-color: ${theme.status.warningColor};
+    color: ${theme.textColorInverted};
     
     &:hover, &:focus {
-      background-color: ${(props) => props.theme.status.warningColorHover};
-      outline: 3px solid ${(props) => props.theme.status.warningColorHover};
+      background-color: ${theme.status.warningColorHover};
+      outline: 3px solid ${theme.status.warningColorHover};
       outline-offset: 2px;
     }
 
     &:active {
-      background-color: ${(props) => props.theme.status.warningColorActive};
+      background-color: ${theme.status.warningColorActive};
     }
   `,
-  error: () => `
-  background-color: ${(props) => props.theme.status.errorColor};
-  color: ${(props) => props.theme.textColorInverted};
+  error: ({ theme }) => `
+  background-color: ${theme.status.errorColor};
+  color: ${theme.textColorInverted};
 
   &:hover {
-    background-color: ${(props) => props.theme.status.errorColorHover};
+    background-color: ${theme.status.errorColorHover};
   }
 
   &:active {
-    background-color: ${(props) => props.theme.status.errorColorActive};
+    background-color: ${theme.status.errorColorActive};
   }
   `,
-  success: () => `
-  background-color: ${(props) => props.theme.status.successColor};
-  color: ${(props) => props.theme.textColorInverted};
+  success: ({ theme }) => `
+  background-color: ${theme.status.successColor};
+  color: ${theme.textColorInverted};
 
   &:hover {
-    background-color: ${(props) => props.theme.status.successColorHover};
+    background-color: ${theme.status.successColorHover};
   }
 
   &:active {
-    background-color: ${(props) => props.theme.status.successColorActive};
+    background-color: ${theme.status.successColorActive};
   }
   `,
 };
