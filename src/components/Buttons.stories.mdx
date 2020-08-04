@@ -2,7 +2,9 @@ import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons";
 import { action } from '@storybook/addon-actions';
 
-import { withKnobs, boolean } from "@storybook/addon-knobs";
+import { withKnobs, boolean, select,text } from "@storybook/addon-knobs";
+
+
 
 <Meta title="Design System|Buttons" component={PrimaryButton} />
 
@@ -14,13 +16,16 @@ Buttons are used to trigger actions within an application.
 
 Buttons are used to trigger internal actions within your web applications.
 
+
+
+
 ## Primary Buttons
 
 Primary buttons are used as a call to action and indicate the most important action on a page.
 
 <Preview withToolbar>
   <Story name="primary">
-  <PrimaryButton disabled={boolean("Disabled",false)}  onClick={action('button-click')} >Design System</PrimaryButton>
+  <PrimaryButton  disabled={boolean("Disabled",false)} modifiers={["small"]} onClick={action('button-click')} > {text("Label", "Hello Storybook")}</PrimaryButton>
   </Story>
 </Preview>
 
@@ -29,7 +34,7 @@ Primary buttons are used as a call to action and indicate the most important act
 Primary buttons are used as a call to action and indicate the most important action on a page.
 <Preview withToolbar>
   <Story name="secondary">
-    <SecondaryButton>Design System</SecondaryButton>
+    <SecondaryButton disabled={boolean("Disabled",false)}>Design System</SecondaryButton>
   </Story>
 </Preview>
 
@@ -38,6 +43,35 @@ Primary buttons are used as a call to action and indicate the most important act
 Primary buttons are used as a call to action and indicate the most important action on a page.
 <Preview withToolbar>
   <Story name="tertiary">
-    <TertiaryButton>Design System</TertiaryButton>
+    <TertiaryButton disabled={boolean("Disabled",false)}>Design System</TertiaryButton>
   </Story>
+</Preview>
+
+## Button Sizes
+Buttons are available in different sizes
+<Preview withToolbar>
+  <Story name="small-btn">
+      <PrimaryButton   modifiers={[ "small"]}> Small Button</PrimaryButton>
+  </Story>
+  <Story name="medium-btn">
+    <PrimaryButton   modifiers={["medium"]}> Medium Button</PrimaryButton>  
+  </Story>
+  <Story name="large-btn">
+     <PrimaryButton  modifiers={[ "large"]}> Large Button</PrimaryButton>  
+  </Story>
+  </Preview>
+
+## Button States
+Button States success error danger highlight the state of event 
+<Preview withToolbar>
+  <Story name="warning">
+      <PrimaryButton disabled={boolean("Disabled",false)}  modifiers={["warning", "small"]}> Warning</PrimaryButton>
+  </Story>
+  <Story name="error">
+    <PrimaryButton disabled={boolean("Disabled",false)}  modifiers={["error", "small"]}> Error</PrimaryButton>  
+  </Story>
+  <Story name="success">
+     <PrimaryButton disabled={boolean("Disabled",false)} modifiers={["success", "small"]}> Sucess</PrimaryButton>  
+  </Story>
+  
 </Preview>
